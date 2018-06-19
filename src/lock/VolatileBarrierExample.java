@@ -1,4 +1,4 @@
-package concurrent_program;
+package lock;
 
 /**
  * Created by jiangyunxiong on 2018/5/2.

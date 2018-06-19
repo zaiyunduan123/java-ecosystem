@@ -1,4 +1,4 @@
-package concurrent_program.deadlock;
+package lock.deadlock;
 
 /**
  * 一个死锁例子

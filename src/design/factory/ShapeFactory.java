@@ -1,4 +1,4 @@
-package design_patterns.factory;
+package design.factory;
 
 /**
  * Created by jiangyunxiong on 2018/4/27.

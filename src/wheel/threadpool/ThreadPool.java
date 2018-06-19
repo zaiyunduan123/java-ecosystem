@@ -1,4 +1,4 @@
-package wheel_making.threadpool_implementation;
+package wheel.threadpool;
 
 /**
  * Created by jiangyunxiong on 2018/6/8.
