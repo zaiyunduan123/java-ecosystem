@@ -20,12 +20,10 @@ public class ArrayListTest {
         List<Integer> synList = Collections.synchronizedList(list);
 
         synchronized (list){
-
             Iterator<Integer> iterator = synList.iterator();
             while(iterator.hasNext()){
                 System.out.println(iterator.next());
             }
         }
     }
-
 }
