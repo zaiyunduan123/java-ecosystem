@@ -59,11 +59,6 @@ Semaphore是用来保护一个或者多个共享资源的访问，Semaphore内�
 Condition的作用是对锁进行更精确的控制。Condition中的await()方法相当于Object的wait()方法，Condition中的signal()方法相当于Object的notify()方法，Condition中的signalAll()相当于Object的notifyAll()方法。不同的是，Object中的wait(),notify(),notifyAll()方法是和"同步锁"(synchronized关键字)捆绑使用的；而Condition是需要与"互斥锁"/"共享锁"捆绑使用的。
 代码示例:[条件变量](https://github.com/zaiyunduan123/Java_ecosystem/tree/master/src/lock/condition/ConditionDemo.java)
 
-### **自己实现独占锁**
-
-内部通过继承队列同步器AQS来实现自定义同步器，自定义锁将操作代理给Sync上。同步器只是定义了若干同步状态获取和释放的方法来供自定义同步组件使用
-
-代码示例:[自定义锁](https://github.com/zaiyunduan123/Java_ecosystem/tree/master/src/lock/custom/Mutex.java)
 
 
 ## 重复造轮子系列
@@ -78,3 +73,16 @@ Condition的作用是对锁进行更精确的控制。Condition中的await()方�
 4. 线程中的任务task
 
 代码示例:[自定义线程池](https://github.com/zaiyunduan123/Java_ecosystem/tree/master/src/wheel/threadpool)
+
+### **自己实现独占锁**
+
+内部通过继承队列同步器AQS来实现自定义同步器，自定义锁将操作代理给Sync上。同步器只是定义了若干同步状态获取和释放的方法来供自定义同步组件使用
+
+代码示例:[自定义锁](https://github.com/zaiyunduan123/Java_ecosystem/tree/master/src/lock/custom/Mutex.java)
+
+
+### **自己实现LRU Cache**
+
+LRU是Least Recently Used 的缩写，翻译过来就是“最近最少使用”，LRU缓存就是使用这种原理实现，简单的说就是缓存一定量的数据，当超过设定的阈值时就把一些过期的数据删除掉，Java里面实现LRU缓存通常有两种选择，一种是使用LinkedHashMap，一种是自己设计数据结构，使用链表+HashMap
+
+代码示例:[自定义LRU缓存](https://github.com/zaiyunduan123/Java_ecosystem/tree/master/src/wheel/lru)
