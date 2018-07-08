@@ -86,3 +86,8 @@ Condition的作用是对锁进行更精确的控制。Condition中的await()方�
 LRU是Least Recently Used 的缩写，翻译过来就是“最近最少使用”，LRU缓存就是使用这种原理实现，简单的说就是缓存一定量的数据，当超过设定的阈值时就把一些过期的数据删除掉，Java里面实现LRU缓存通常有两种选择，一种是使用LinkedHashMap，一种是自己设计数据结构，使用链表+HashMap
 
 代码示例:[自定义LRU缓存](https://github.com/zaiyunduan123/Java_ecosystem/tree/master/src/wheel/lru)
+
+
+## JVM
+
+### 栈溢出
