@@ -1,7 +1,6 @@
 package com.jesper.basis.jvm;
 
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -22,7 +21,7 @@ public class JVMExceptionDemo {
      * 堆溢出 VM Args: -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
      */
     public void OutOfMemoryTest() {
-        List<byte[]> list = new ArrayList<>();
+        List<byte[]> list = new ArrayList<byte[]>();
         int i = 0;
         while (true) {
             list.add(new byte[5 * 1024 * 1024]);
@@ -55,7 +54,7 @@ public class JVMExceptionDemo {
      * 永久代溢出  VM Args:-XX:PermSize=10m -XX:MaxPermSize=10m
      */
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         int i = 1;
         try {
             while (true) {

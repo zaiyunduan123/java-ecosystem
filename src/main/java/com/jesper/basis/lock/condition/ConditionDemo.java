@@ -16,7 +16,7 @@ public class ConditionDemo {
     private Condition take = lock.newCondition();
     private Condition put = lock.newCondition();
 
-    private BlockingQueue queue = new ArrayBlockingQueue<>(10000);
+    private BlockingQueue queue = new ArrayBlockingQueue<Integer>(10000);
 
     private int capacity = 5;
     private int i = 1;
@@ -52,13 +52,13 @@ public class ConditionDemo {
         lock.lock();
         System.out.println("【take】获取锁！");
 
-        int data = 0;
+        Object data = 0;
         try {
             while (queue.size() == 0) {
                 System.out.println("【take】执行take.await！");
                 take.await();
             }
-            data = (int) queue.take();
+            data =queue.take();
             System.out.println(String.format("【take】从队列读取值 %d ,队列值：【%s】", data, queue.toArray()));
 
             // 写操作唤醒
